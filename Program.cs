@@ -7,10 +7,10 @@ namespace ConsoleApplication5
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             string vorname, nachname, name;
-            double bmi = 0;
+            double bmi;
             Console.Write("Gib deinen Vorname ein: ");
             vorname = Console.ReadLine();
             Console.Write("Gib deinen Nachnamen ein: ");
@@ -18,20 +18,20 @@ namespace ConsoleApplication5
             name = vorname + " " + nachname;
             try
             {
-                bmi = BMI();
+                bmi = BMIRechnen();
                 Console.WriteLine(Ausgabe(name, bmi));
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            warteBenutzerEingabe();
+            WarteBenutzerEingabe();
         }
-        static double BMI()
+        static double BMIRechnen()
         {
             string alt;
             int alter;
-            double gewicht, größe, bmi;
+            double gewicht, groesse, bmi;
             Console.Write("Dein Alter: ");
             alt = Console.ReadLine();
 
@@ -45,9 +45,9 @@ namespace ConsoleApplication5
             {
                 throw new Exception("Du bist zu alt, um dir wegen sowas sorgen zu machen.\n");
             }
-            gewicht = GEWICHT();
-            größe = GRÖßE();
-            bmi = gewicht / ((größe / 100) * (größe / 100));
+            gewicht = GewichtEingabe();
+            groesse = GroesseEingabe();
+            bmi = gewicht / ((groesse / 100) * (groesse / 100));
             return bmi;
         }
         static string Ausgabe(string name, double bmi)
@@ -89,13 +89,12 @@ namespace ConsoleApplication5
             }
             return message;
         }
-        static double GEWICHT()
+        static double GewichtEingabe()
         {
             string gew;
-            double gewicht;
             Console.Write("Gib dein Gewicht ein: ");
             gew = Console.ReadLine();
-            bool gewi = double.TryParse(gew, out gewicht);
+            bool gewi = double.TryParse(gew, out double gewicht);
             if (gewi == false)
             {
                 Console.WriteLine("Du kannst keine Buchstaben bei Gewicht angeben.");
@@ -103,23 +102,24 @@ namespace ConsoleApplication5
             }
             return gewicht;
         }
-        static double GRÖßE()
+        static double GroesseEingabe()
         {
             string gr;
-            double größe;
             Console.Write("Gib deine Körpergröße ein: ");
             gr = Console.ReadLine();
 
-            bool grö = double.TryParse(gr, out größe);
-            if (grö == false)
+            bool groe = double.TryParse(gr, out double groesse);
+            if (groe == false)
             {
                 Console.WriteLine("Du kannst keine Buchstaben bei Körpergröße angeben.");
                 Console.Read();
             }
-            return größe;
+            return groesse;
         }
-        static void warteBenutzerEingabe()
+        static void WarteBenutzerEingabe()
         {
+
+            Console.WriteLine("\n\nDrücken Sie bitte die ENTER Taste zum beenden");
             Console.ReadLine();
         }
     }
