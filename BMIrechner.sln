@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BMIrechner", "BMIrechner.csproj", "{F3397D48-362A-4B55-8178-B8588AEE7C6A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F3397D48-362A-4B55-8178-B8588AEE7C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3397D48-362A-4B55-8178-B8588AEE7C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3397D48-362A-4B55-8178-B8588AEE7C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3397D48-362A-4B55-8178-B8588AEE7C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {25B09F7D-4132-44F0-A244-8222F9F64D5E}
+	EndGlobalSection
+EndGlobal
